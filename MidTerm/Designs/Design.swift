@@ -24,10 +24,10 @@ extension UIView {
         self.layer.insertSublayer(gradientLayer, at:0)
     }
     
-    func TriGradiantColor(colorTop: UIColor, colorMiddle: UIColor, colorBottom: UIColor) {
+    func GradiantColor(colorTop: UIColor, colorSecond: UIColor,colorThird: UIColor, colorBottom: UIColor) {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop.cgColor,colorMiddle.cgColor, colorBottom.cgColor]
-        gradientLayer.locations = [0.0,0.5,1.0]
+        gradientLayer.colors = [colorTop.cgColor,colorSecond.cgColor,colorThird.cgColor, colorBottom.cgColor]
+        gradientLayer.locations = [0.0,0.33,0.66,1.0]
         gradientLayer.frame = self.bounds
         
         self.layer.insertSublayer(gradientLayer, at:0)
@@ -37,7 +37,7 @@ extension UIView {
 class bakhvaButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.white
         let width = self.frame.width
         let height = self.frame.height
         let midY = (height) / 2
@@ -70,7 +70,6 @@ class bakhvaButton: UIButton {
         gradient.mask = shapeMask
         self.layer.addSublayer(gradient)
 
-        self.setTitle("BUTTON", for: .normal)
         self.titleLabel?.font = .boldSystemFont(ofSize: 20)
         self.setTitleColor(.systemPurple, for: .normal)
     }
