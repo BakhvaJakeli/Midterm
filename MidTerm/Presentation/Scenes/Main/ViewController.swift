@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.BackgroundColor(colorTop: .purple, colorBottom: .black)
+        self.view.TriGradiantColor(colorTop: .black, colorMiddle: .purple, colorBottom: .Navy)
     }
 
 

@@ -25,12 +25,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-YA-DPs">
                                 <rect key="frame" x="20" y="470" width="374" height="292"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-bP-OdT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-bP-OdT" customClass="bakhvaButton" customModule="MidTerm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="96"/>
                                         <color key="backgroundColor" red="0.066135394364428446" green="0.10244852694604951" blue="0.13094083227292452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="New Game"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-1u-9k1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-1u-9k1" customClass="bakhvaButton" customModule="MidTerm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="196" width="374" height="96"/>
                                         <color key="backgroundColor" red="0.066135394364428446" green="0.10244852694604951" blue="0.13094083227292452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="High Score"/>
