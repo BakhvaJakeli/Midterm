@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pgU-eI-wLg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-Yl-X7Z">
+                                <rect key="frame" x="70" y="160" width="274" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="8QH-tq-BON"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-YA-DPs">
+                                <rect key="frame" x="20" y="470" width="374" height="292"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-bP-OdT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="96"/>
+                                        <color key="backgroundColor" red="0.066135394364428446" green="0.10244852694604951" blue="0.13094083227292452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="New Game"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2i-1u-9k1">
+                                        <rect key="frame" x="0.0" y="196" width="374" height="96"/>
+                                        <color key="backgroundColor" red="0.066135394364428446" green="0.10244852694604951" blue="0.13094083227292452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="High Score"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.038322914183040215" green="0.029535480271011973" blue="0.13094083227292452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GdS-YA-DPs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Jr-WS-e6O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdS-YA-DPs" secondAttribute="trailing" constant="20" id="X1Z-WQ-J4l"/>
+                            <constraint firstItem="cOl-Yl-X7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="bUz-aU-tvh"/>
+                            <constraint firstItem="cOl-Yl-X7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="crD-Oq-NQA"/>
+                            <constraint firstItem="GdS-YA-DPs" firstAttribute="top" secondItem="cOl-Yl-X7Z" secondAttribute="bottom" constant="150" id="fjc-Bh-DJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GdS-YA-DPs" secondAttribute="bottom" constant="100" id="hbR-0m-VnG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOl-Yl-X7Z" secondAttribute="trailing" constant="70" id="vLB-a2-bJo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="i7Y-I8-V2H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RUP-65-D0L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pgU-eI-wLg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kdf-Fl-mdN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g8b-v2-ZFv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeQ-6k-qbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2" width="966" height="959"/>
+    </resources>
+</document>
