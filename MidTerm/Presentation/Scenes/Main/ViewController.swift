@@ -12,10 +12,14 @@ class ViewController: UIViewController {
 
     var backgroundMusic: AVAudioPlayer?
 
-
+    @IBOutlet weak var newGameBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         musicStart()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.BackgroundColor(colorTop: .purple, colorBottom: .black)
     }
 
 
@@ -43,3 +47,5 @@ extension ViewController {
         }
     }
 }
+
+

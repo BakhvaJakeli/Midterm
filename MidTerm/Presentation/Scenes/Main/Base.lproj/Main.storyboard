@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,10 +51,58 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i7Y-I8-V2H"/>
+                    <connections>
+                        <outlet property="newGameBtn" destination="cb1-bP-OdT" id="cgK-wU-4Zj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="87.723214285714278"/>
+        </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="Y06-OU-fqL">
+            <objects>
+                <viewController storyboardIdentifier="Questions" id="TLZ-Ng-Bc4" customClass="QuestionsViewController" customModule="MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZlK-49-JPE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Weu-oC-kS8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa7-wz-0Sa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="342"/>
+        </scene>
+        <!--High Score View Controller-->
+        <scene sceneID="CCn-lX-5Jf">
+            <objects>
+                <viewController storyboardIdentifier="HighScore" id="gwo-a1-0pN" customClass="HighScoreViewController" customModule="MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eku-JZ-uWi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="udh-nK-sYX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KeZ-ed-Jx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="88"/>
+        </scene>
+        <!--Progress View Controller-->
+        <scene sceneID="yOF-u5-fYh">
+            <objects>
+                <viewController storyboardIdentifier="Progress" id="DEn-v4-XRv" customClass="ProgressViewController" customModule="MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k5f-12-Tqn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IaS-sX-Avi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxB-d8-uOy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="-351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RUP-65-D0L">
@@ -75,5 +124,8 @@
     </scenes>
     <resources>
         <image name="2" width="966" height="959"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

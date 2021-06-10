@@ -16,6 +16,12 @@
 		D08CEB2D2672505900087A4F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB2C2672505900087A4F /* GameScene.swift */; };
 		D08CEB302672523C00087A4F /* Who Wants To Be A Millionaire Full Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D08CEB2F2672523C00087A4F /* Who Wants To Be A Millionaire Full Theme.mp3 */; };
 		D08CEB33267263C300087A4F /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB32267263C200087A4F /* Design.swift */; };
+		D08CEB3526726D2F00087A4F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB3426726D2F00087A4F /* Models.swift */; };
+		D08CEB3D2672756900087A4F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB3C2672756900087A4F /* NetworkManager.swift */; };
+		D08CEB41267275C700087A4F /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB40267275C700087A4F /* QuestionManager.swift */; };
+		D08CEB4326727B2F00087A4F /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4226727B2F00087A4F /* ProgressViewController.swift */; };
+		D08CEB4526727B4400087A4F /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4426727B4400087A4F /* QuestionsViewController.swift */; };
+		D08CEB4726727B5C00087A4F /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4626727B5C00087A4F /* HighScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		D08CEB2C2672505900087A4F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D08CEB2F2672523C00087A4F /* Who Wants To Be A Millionaire Full Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Who Wants To Be A Millionaire Full Theme.mp3"; sourceTree = SOURCE_ROOT; };
 		D08CEB32267263C200087A4F /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		D08CEB3426726D2F00087A4F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D08CEB3C2672756900087A4F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D08CEB40267275C700087A4F /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		D08CEB4226727B2F00087A4F /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		D08CEB4426727B4400087A4F /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		D08CEB4626727B5C00087A4F /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,9 @@
 		D08CEB1126724C7500087A4F /* MidTerm */ = {
 			isa = PBXGroup;
 			children = (
+				D08CEB3E2672759000087A4F /* API */,
+				D08CEB3B2672754D00087A4F /* Network */,
+				D08CEB3A2672753E00087A4F /* Models */,
 				D08CEB31267263A300087A4F /* Designs */,
 				D08CEB2B2672502D00087A4F /* Music */,
 				D08CEB2626724D9300087A4F /* App */,
@@ -109,8 +124,10 @@
 		D08CEB2A26724E1E00087A4F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D08CEB1826724C7500087A4F /* Main.storyboard */,
-				D08CEB1626724C7500087A4F /* ViewController.swift */,
+				D08CEB362672746C00087A4F /* Main */,
+				D08CEB372672747D00087A4F /* Progress */,
+				D08CEB38267274A800087A4F /* Questions */,
+				D08CEB39267274BA00087A4F /* HighScore */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -138,6 +155,63 @@
 				D08CEB32267263C200087A4F /* Design.swift */,
 			);
 			path = Designs;
+			sourceTree = "<group>";
+		};
+		D08CEB362672746C00087A4F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB1826724C7500087A4F /* Main.storyboard */,
+				D08CEB1626724C7500087A4F /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D08CEB372672747D00087A4F /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB4226727B2F00087A4F /* ProgressViewController.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		D08CEB38267274A800087A4F /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB4426727B4400087A4F /* QuestionsViewController.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		D08CEB39267274BA00087A4F /* HighScore */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB4626727B5C00087A4F /* HighScoreViewController.swift */,
+			);
+			path = HighScore;
+			sourceTree = "<group>";
+		};
+		D08CEB3A2672753E00087A4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB3426726D2F00087A4F /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D08CEB3B2672754D00087A4F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB3C2672756900087A4F /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D08CEB3E2672759000087A4F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D08CEB40267275C700087A4F /* QuestionManager.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +288,14 @@
 				D08CEB1726724C7500087A4F /* ViewController.swift in Sources */,
 				D08CEB1326724C7500087A4F /* AppDelegate.swift in Sources */,
 				D08CEB2D2672505900087A4F /* GameScene.swift in Sources */,
+				D08CEB41267275C700087A4F /* QuestionManager.swift in Sources */,
+				D08CEB3D2672756900087A4F /* NetworkManager.swift in Sources */,
+				D08CEB3526726D2F00087A4F /* Models.swift in Sources */,
+				D08CEB4526727B4400087A4F /* QuestionsViewController.swift in Sources */,
+				D08CEB4326727B2F00087A4F /* ProgressViewController.swift in Sources */,
 				D08CEB1526724C7500087A4F /* SceneDelegate.swift in Sources */,
 				D08CEB33267263C300087A4F /* Design.swift in Sources */,
+				D08CEB4726727B5C00087A4F /* HighScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

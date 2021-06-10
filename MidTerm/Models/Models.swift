@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Welcome: Codable {
+struct TheGame: Codable {
     let games: [Game]
 }
 
