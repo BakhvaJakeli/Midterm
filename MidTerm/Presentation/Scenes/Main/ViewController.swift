@@ -12,14 +12,16 @@ class ViewController: UIViewController {
 
     var backgroundMusic: AVAudioPlayer?
 
+    @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var newGameBtn: UIButton!
+    @IBOutlet weak var HighScoreBtn: bakhvaButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         musicStart()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .purple, colorBottom: .black)
+        self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .blue, colorBottom: .black)
     }
 
 

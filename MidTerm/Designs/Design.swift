@@ -37,7 +37,7 @@ extension UIView {
 class bakhvaButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.clear
         let width = self.frame.width
         let height = self.frame.height
         let midY = (height) / 2
@@ -74,4 +74,15 @@ class bakhvaButton: UIButton {
         self.setTitleColor(.systemPurple, for: .normal)
     }
     
+}
+
+extension UIView{
+    func rotate() {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
+        rotation.toValue = NSNumber(value: Double.pi * 2)
+        rotation.duration = 1
+        rotation.isCumulative = true
+        rotation.repeatCount = Float.greatestFiniteMagnitude
+        self.layer.add(rotation, forKey: "rotationAnimation")
+    }
 }

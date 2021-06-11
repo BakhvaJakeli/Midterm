@@ -52,6 +52,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="i7Y-I8-V2H"/>
                     <connections>
+                        <outlet property="HighScoreBtn" destination="L2i-1u-9k1" id="97h-ZO-9PK"/>
+                        <outlet property="mainImg" destination="cOl-Yl-X7Z" id="sbf-dJ-7LF"/>
                         <outlet property="newGameBtn" destination="cb1-bP-OdT" id="cgK-wU-4Zj"/>
                     </connections>
                 </viewController>
