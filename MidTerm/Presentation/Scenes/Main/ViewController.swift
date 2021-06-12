@@ -9,11 +9,11 @@ import AVFoundation
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var backgroundMusic: AVAudioPlayer?
-
+    
     @IBOutlet weak var mainImg: UIImageView!
-    @IBOutlet weak var newGameBtn: UIButton!
+    @IBOutlet weak var newGameBtn: bakhvaButton!
     @IBOutlet weak var HighScoreBtn: bakhvaButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,31 +23,46 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .blue, colorBottom: .black)
     }
-
-
+    
+    @IBAction func rulesBrn(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Rules") as! RulesViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func newGameAct(_ sender: Any) {
+        if let backgroundMusic = backgroundMusic, backgroundMusic.isPlaying {
+            backgroundMusic.stop()
+        }
+        let transition: CATransition = CATransition()
+            transition.duration = 0.4
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        self.navigationController!.view.layer.add(transition, forKey: nil)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Questions") as! QuestionsViewController
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
 }
 
 extension ViewController {
     func musicStart() {
-        if let backgroundMusic = backgroundMusic, backgroundMusic.isPlaying {
-            backgroundMusic.stop()
+        
+        let musicURL = Bundle.main.path(forResource: "Who Wants To Be A Millionaire Full Theme", ofType: "mp3")
+        
+        do {
+            try AVAudioSession.sharedInstance().setMode(.default)
+            try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+            guard let musicURL = musicURL else { return }
+            backgroundMusic = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicURL))
+            guard let backgroundMusic = backgroundMusic else {return}
+            backgroundMusic.play()
         }
-        else {
-            let musicURL = Bundle.main.path(forResource: "Who Wants To Be A Millionaire Full Theme", ofType: "mp3")
-            
-            do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                guard let musicURL = musicURL else { return }
-                backgroundMusic = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicURL))
-                guard let backgroundMusic = backgroundMusic else {return}
-                backgroundMusic.play()
-            }
-            catch  {
-                print("error")
-            }
+        catch  {
+            print("error")
         }
     }
 }
+
 
 

@@ -9,21 +9,25 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerOne: QuestionsButton!
+    @IBOutlet weak var answerTwo: QuestionsButton!
+    @IBOutlet weak var answerThree: QuestionsButton!
+    @IBOutlet weak var answerFour: QuestionsButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.GradiantColor(colorTop: .darkPurple, colorSecond: .Navy, colorThird: .blue, colorBottom: .darkPurple)
+        customLabel()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+}
+extension QuestionsViewController {
+    func customLabel() {
+        questionLabel.clipsToBounds = true
+        questionLabel.layer.cornerRadius = questionLabel.frame.height / 3
+        questionLabel.layer.borderWidth = 3
+        questionLabel.layer.borderColor = UIColor.systemBlue.cgColor
     }
-    */
-
 }
