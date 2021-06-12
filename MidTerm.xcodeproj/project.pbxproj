@@ -24,6 +24,7 @@
 		D08CEB4726727B5C00087A4F /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4626727B5C00087A4F /* HighScoreViewController.swift */; };
 		D08CEB492673A2AC00087A4F /* TheButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB482673A2AB00087A4F /* TheButton.swift */; };
 		D08CEB4C2674F6C700087A4F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4B2674F6C700087A4F /* RulesViewController.swift */; };
+		D811214926755E3C00A5A1D6 /* AudianceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811214826755E3C00A5A1D6 /* AudianceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D08CEB4626727B5C00087A4F /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		D08CEB482673A2AB00087A4F /* TheButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheButton.swift; sourceTree = "<group>"; };
 		D08CEB4B2674F6C700087A4F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		D811214826755E3C00A5A1D6 /* AudianceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudianceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				D08CEB372672747D00087A4F /* Progress */,
 				D08CEB38267274A800087A4F /* Questions */,
 				D08CEB39267274BA00087A4F /* HighScore */,
+				D811214726755E1400A5A1D6 /* Audiance */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -228,6 +231,14 @@
 			path = Rules;
 			sourceTree = "<group>";
 		};
+		D811214726755E1400A5A1D6 /* Audiance */ = {
+			isa = PBXGroup;
+			children = (
+				D811214826755E3C00A5A1D6 /* AudianceViewController.swift */,
+			);
+			path = Audiance;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +316,7 @@
 				D08CEB492673A2AC00087A4F /* TheButton.swift in Sources */,
 				D08CEB41267275C700087A4F /* QuestionManager.swift in Sources */,
 				D08CEB3D2672756900087A4F /* NetworkManager.swift in Sources */,
+				D811214926755E3C00A5A1D6 /* AudianceViewController.swift in Sources */,
 				D08CEB3526726D2F00087A4F /* Models.swift in Sources */,
 				D08CEB4C2674F6C700087A4F /* RulesViewController.swift in Sources */,
 				D08CEB4526727B4400087A4F /* QuestionsViewController.swift in Sources */,

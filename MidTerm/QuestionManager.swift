@@ -13,6 +13,12 @@ protocol QuestionManagerProtocol: AnyObject {
 
 class QuestionManager: QuestionManagerProtocol {
     
+    static let shared = QuestionManager()
+    
+    private init() {
+        
+    }
+    
     func fetchQuestions(completion: @escaping ((TheGame) -> Void)) {
         let url = "https://raw.githubusercontent.com/aaronnech/Who-Wants-to-Be-a-Millionaire/master/questions.json"
         NetworkManager.shared.get(url: url) { (result: Result<TheGame, Error>) in

@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         transition.type = CATransitionType.fade
         self.navigationController!.view.layer.add(transition, forKey: nil)
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Questions") as! QuestionsViewController
+        let vc = sb.instantiateViewController(withIdentifier: "Progress") as! ProgressViewController
         navigationController?.pushViewController(vc, animated: false)
     }
     

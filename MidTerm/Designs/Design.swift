@@ -97,7 +97,7 @@ class QuestionsButton: UIButton {
         self.layer.cornerRadius = self.frame.height / 3
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.systemBlue.cgColor
-        self.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        self.titleLabel?.font = .boldSystemFont(ofSize: 11)
         self.setTitleColor(.lightGray, for: .normal)
     }
 }
@@ -126,3 +126,29 @@ class customTextview: UITextView {
     }
 }
 
+class customLabelOne: UILabel {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.clipsToBounds = true
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = self.frame.height / 3
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.systemBlue.cgColor
+        self.font = .boldSystemFont(ofSize: 18)
+        self.textColor = .lightGray
+    }
+}
+
+class customLabelTwo: UILabel {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.clipsToBounds = true
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = self.frame.height / 3
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.systemBlue.cgColor
+        self.font = .boldSystemFont(ofSize: 24)
+        self.textColor = .yellow
+        
+    }
+}
