@@ -12,26 +12,29 @@ extension UIColor {
     static let colorBottom = UIColor(red: 255.0/255.0, green: 94.0/255.0, blue: 58.0/255.0, alpha: 1.0)
     static let Navy = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 128.0/255.0, alpha: 1.0)
     static let darkPurple = UIColor(red: 25.0/255.0, green: 0.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+    static let bakhvaRed = UIColor(red: 102.0/255.0, green: 0.0/255.0, blue: 51.0/255.0, alpha: 1.0)
 }
 
 
 extension UIView {
-    func BackgroundColor(colorTop: UIColor, colorBottom: UIColor) {
+    func BackgroundColor(colorTop: UIColor, colorBottom: UIColor) -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop.cgColor, colorBottom.cgColor]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.bounds
         
         self.layer.insertSublayer(gradientLayer, at:0)
+        return gradientLayer
     }
     
-    func GradiantColor(colorTop: UIColor, colorSecond: UIColor,colorThird: UIColor, colorBottom: UIColor) {
+    func GradiantColor(colorTop: UIColor, colorSecond: UIColor,colorThird: UIColor, colorBottom: UIColor) -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop.cgColor,colorSecond.cgColor,colorThird.cgColor, colorBottom.cgColor]
         gradientLayer.locations = [0.0,0.33,0.66,1.0]
         gradientLayer.frame = self.bounds
         
         self.layer.insertSublayer(gradientLayer, at:0)
+        return gradientLayer
     }
 }
 
@@ -39,7 +42,7 @@ class bakhvaButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.clipsToBounds = true
-        self.GradiantColor(colorTop: .darkPurple, colorSecond: .Navy, colorThird: .purple, colorBottom: .darkPurple)
+        let _ = self.GradiantColor(colorTop: .darkPurple, colorSecond: .Navy, colorThird: .purple, colorBottom: .darkPurple)
         self.backgroundColor = .clear
         self.layer.cornerRadius = self.frame.height / 3
         self.layer.borderWidth = 3
@@ -89,10 +92,11 @@ class bakhvaButton: UIButton {
 }
 
 class QuestionsButton: UIButton {
+    var subLayer: CAGradientLayer?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.subLayer = self.BackgroundColor(colorTop: .black, colorBottom: .purple)
         self.clipsToBounds = true
-        self.BackgroundColor(colorTop: .black, colorBottom: .purple)
         self.backgroundColor = .clear
         self.layer.cornerRadius = self.frame.height / 3
         self.layer.borderWidth = 2
@@ -100,6 +104,8 @@ class QuestionsButton: UIButton {
         self.titleLabel?.font = .boldSystemFont(ofSize: 11)
         self.setTitleColor(.lightGray, for: .normal)
     }
+    
+    
 }
 
 extension UIView{
@@ -116,7 +122,7 @@ extension UIView{
 class customTextview: UITextView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.GradiantColor(colorTop: .black, colorSecond: .purple, colorThird: .systemIndigo, colorBottom: .black)
+        let _ = self.GradiantColor(colorTop: .black, colorSecond: .purple, colorThird: .systemIndigo, colorBottom: .black)
         self.clipsToBounds = true
         self.layer.cornerRadius = 20
         self.layer.borderWidth = 1

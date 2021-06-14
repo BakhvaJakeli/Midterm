@@ -25,6 +25,15 @@
 		D08CEB492673A2AC00087A4F /* TheButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB482673A2AB00087A4F /* TheButton.swift */; };
 		D08CEB4C2674F6C700087A4F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CEB4B2674F6C700087A4F /* RulesViewController.swift */; };
 		D811214926755E3C00A5A1D6 /* AudianceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D811214826755E3C00A5A1D6 /* AudianceViewController.swift */; };
+		D89EE3C226763D8300ACA740 /* Who Wants To Be A Millionaire Music 64000 500000 Question.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3C126763D8300ACA740 /* Who Wants To Be A Millionaire Music 64000 500000 Question.mp3 */; };
+		D89EE3C42676415400ACA740 /* Who Wants To Be A Millioanire Correct Answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3C32676415400ACA740 /* Who Wants To Be A Millioanire Correct Answer.mp3 */; };
+		D89EE3C626764C1000ACA740 /* $8,000 Lose - Who Wants to Be a Millionaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3C526764C1000ACA740 /* $8,000 Lose - Who Wants to Be a Millionaire.mp3 */; };
+		D89EE3C826764EBA00ACA740 /* $2,000 Final Answer - Who Wants to Be a Millionaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3C726764EBA00ACA740 /* $2,000 Final Answer - Who Wants to Be a Millionaire.mp3 */; };
+		D89EE3CB2676520700ACA740 /* Milestone Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3C92676520700ACA740 /* Milestone Win.mp3 */; };
+		D89EE3CC2676520700ACA740 /* Just win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3CA2676520700ACA740 /* Just win.mp3 */; };
+		D89EE3CF2676A2CE00ACA740 /* DutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EE3CE2676A2CE00ACA740 /* DutaViewController.swift */; };
+		D89EE3D12676A9ED00ACA740 /* Old Telephone Rings Ringtone Free Ringtones Downloads.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3D02676A9EC00ACA740 /* Old Telephone Rings Ringtone Free Ringtones Downloads.mp3 */; };
+		D89EE3D32676D35500ACA740 /* $1 Millon Win Music - You Just Won A Million Dollars!!!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D89EE3D22676D35500ACA740 /* $1 Millon Win Music - You Just Won A Million Dollars!!!.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,15 @@
 		D08CEB482673A2AB00087A4F /* TheButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheButton.swift; sourceTree = "<group>"; };
 		D08CEB4B2674F6C700087A4F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		D811214826755E3C00A5A1D6 /* AudianceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudianceViewController.swift; sourceTree = "<group>"; };
+		D89EE3C126763D8300ACA740 /* Who Wants To Be A Millionaire Music 64000 500000 Question.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Who Wants To Be A Millionaire Music 64000 500000 Question.mp3"; sourceTree = "<group>"; };
+		D89EE3C32676415400ACA740 /* Who Wants To Be A Millioanire Correct Answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Who Wants To Be A Millioanire Correct Answer.mp3"; sourceTree = SOURCE_ROOT; };
+		D89EE3C526764C1000ACA740 /* $8,000 Lose - Who Wants to Be a Millionaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "$8,000 Lose - Who Wants to Be a Millionaire.mp3"; sourceTree = SOURCE_ROOT; };
+		D89EE3C726764EBA00ACA740 /* $2,000 Final Answer - Who Wants to Be a Millionaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "$2,000 Final Answer - Who Wants to Be a Millionaire.mp3"; sourceTree = SOURCE_ROOT; };
+		D89EE3C92676520700ACA740 /* Milestone Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Milestone Win.mp3"; sourceTree = "<group>"; };
+		D89EE3CA2676520700ACA740 /* Just win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Just win.mp3"; sourceTree = "<group>"; };
+		D89EE3CE2676A2CE00ACA740 /* DutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutaViewController.swift; sourceTree = "<group>"; };
+		D89EE3D02676A9EC00ACA740 /* Old Telephone Rings Ringtone Free Ringtones Downloads.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Old Telephone Rings Ringtone Free Ringtones Downloads.mp3"; sourceTree = SOURCE_ROOT; };
+		D89EE3D22676D35500ACA740 /* $1 Millon Win Music - You Just Won A Million Dollars!!!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "$1 Millon Win Music - You Just Won A Million Dollars!!!.mp3"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +154,7 @@
 				D08CEB38267274A800087A4F /* Questions */,
 				D08CEB39267274BA00087A4F /* HighScore */,
 				D811214726755E1400A5A1D6 /* Audiance */,
+				D89EE3CD2676A2B900ACA740 /* Duta */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -153,6 +172,14 @@
 			isa = PBXGroup;
 			children = (
 				D08CEB2F2672523C00087A4F /* Who Wants To Be A Millionaire Full Theme.mp3 */,
+				D89EE3C126763D8300ACA740 /* Who Wants To Be A Millionaire Music 64000 500000 Question.mp3 */,
+				D89EE3C32676415400ACA740 /* Who Wants To Be A Millioanire Correct Answer.mp3 */,
+				D89EE3C526764C1000ACA740 /* $8,000 Lose - Who Wants to Be a Millionaire.mp3 */,
+				D89EE3C726764EBA00ACA740 /* $2,000 Final Answer - Who Wants to Be a Millionaire.mp3 */,
+				D89EE3CA2676520700ACA740 /* Just win.mp3 */,
+				D89EE3C92676520700ACA740 /* Milestone Win.mp3 */,
+				D89EE3D02676A9EC00ACA740 /* Old Telephone Rings Ringtone Free Ringtones Downloads.mp3 */,
+				D89EE3D22676D35500ACA740 /* $1 Millon Win Music - You Just Won A Million Dollars!!!.mp3 */,
 			);
 			path = "Music Library";
 			sourceTree = "<group>";
@@ -239,6 +266,14 @@
 			path = Audiance;
 			sourceTree = "<group>";
 		};
+		D89EE3CD2676A2B900ACA740 /* Duta */ = {
+			isa = PBXGroup;
+			children = (
+				D89EE3CE2676A2CE00ACA740 /* DutaViewController.swift */,
+			);
+			path = Duta;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,9 +331,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89EE3CB2676520700ACA740 /* Milestone Win.mp3 in Resources */,
 				D08CEB1F26724C7900087A4F /* LaunchScreen.storyboard in Resources */,
+				D89EE3C826764EBA00ACA740 /* $2,000 Final Answer - Who Wants to Be a Millionaire.mp3 in Resources */,
+				D89EE3C42676415400ACA740 /* Who Wants To Be A Millioanire Correct Answer.mp3 in Resources */,
+				D89EE3D12676A9ED00ACA740 /* Old Telephone Rings Ringtone Free Ringtones Downloads.mp3 in Resources */,
+				D89EE3D32676D35500ACA740 /* $1 Millon Win Music - You Just Won A Million Dollars!!!.mp3 in Resources */,
 				D08CEB1C26724C7900087A4F /* Assets.xcassets in Resources */,
 				D08CEB1A26724C7500087A4F /* Main.storyboard in Resources */,
+				D89EE3C226763D8300ACA740 /* Who Wants To Be A Millionaire Music 64000 500000 Question.mp3 in Resources */,
+				D89EE3C626764C1000ACA740 /* $8,000 Lose - Who Wants to Be a Millionaire.mp3 in Resources */,
+				D89EE3CC2676520700ACA740 /* Just win.mp3 in Resources */,
 				D08CEB302672523C00087A4F /* Who Wants To Be A Millionaire Full Theme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +356,7 @@
 				D08CEB1726724C7500087A4F /* ViewController.swift in Sources */,
 				D08CEB1326724C7500087A4F /* AppDelegate.swift in Sources */,
 				D08CEB2D2672505900087A4F /* GameScene.swift in Sources */,
+				D89EE3CF2676A2CE00ACA740 /* DutaViewController.swift in Sources */,
 				D08CEB492673A2AC00087A4F /* TheButton.swift in Sources */,
 				D08CEB41267275C700087A4F /* QuestionManager.swift in Sources */,
 				D08CEB3D2672756900087A4F /* NetworkManager.swift in Sources */,
@@ -471,7 +515,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5B8CT9YP2Z;
 				INFOPLIST_FILE = "$(SRCROOT)/MidTerm/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +535,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5B8CT9YP2Z;
 				INFOPLIST_FILE = "$(SRCROOT)/MidTerm/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -17,11 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var HighScoreBtn: bakhvaButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicStart()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .blue, colorBottom: .black)
+        let _ = self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .blue, colorBottom: .black)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.musicStart()
+        })
     }
     
     @IBAction func rulesBrn(_ sender: Any) {

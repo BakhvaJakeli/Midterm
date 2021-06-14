@@ -8,12 +8,12 @@
 import Foundation
 
 struct TheGame: Codable {
-    let games: [Game]
+    var games: [Game]
 }
 
 // MARK: - Game
 struct Game: Codable {
-    let questions: [Question]
+    var questions: [Question]
 }
 
 // MARK: - Question

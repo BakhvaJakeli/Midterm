@@ -13,6 +13,7 @@ class AudianceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.contentView.layer.cornerRadius = 20
+        
     }
 
 }

@@ -12,7 +12,7 @@ class RulesViewController: UIViewController {
     @IBOutlet weak var RulesText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .systemBlue, colorBottom: .black)
+        let _ = self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .systemBlue, colorBottom: .black)
 
     }
 
