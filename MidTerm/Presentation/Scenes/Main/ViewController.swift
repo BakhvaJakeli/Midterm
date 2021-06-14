@@ -20,12 +20,14 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let _ = self.view.GradiantColor(colorTop: .black, colorSecond: .Navy, colorThird: .blue, colorBottom: .black)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.musicStart()
         })
+        mainImg.rotate()
+        changeBackgroundColors()
+        
     }
-    
+        
     @IBAction func rulesBrn(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "Rules") as! RulesViewController

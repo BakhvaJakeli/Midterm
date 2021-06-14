@@ -49,42 +49,42 @@ class bakhvaButton: UIButton {
         self.layer.borderColor = UIColor.purple.cgColor
         self.autoresizingMask = [.flexibleBottomMargin, .flexibleTopMargin, .flexibleLeftMargin, .flexibleRightMargin]
         
-//        let view = UIView()
-//        view.layer.cornerRadius = self.frame.height / 3
-//        view.GradiantColor(colorTop: .darkPurple, colorSecond: .Navy, colorThird: .purple, colorBottom: .darkPurple)
+        //        let view = UIView()
+        //        view.layer.cornerRadius = self.frame.height / 3
+        //        view.GradiantColor(colorTop: .darkPurple, colorSecond: .Navy, colorThird: .purple, colorBottom: .darkPurple)
         
-//        let width = self.frame.width
-//        let height = self.frame.height
-//        let midY = (height) / 2
-//
-//        let aPath = UIBezierPath()
-//
-//        aPath.move(to: CGPoint(x: 20, y: 0))
-//
-//        aPath.addLine(to: CGPoint(x: width - 20, y: 0))
-//        aPath.addLine(to: CGPoint(x: width, y: midY))
-//        aPath.addLine(to: CGPoint(x: width - 20, y: height))
-//        aPath.addLine(to: CGPoint(x: 20, y: height))
-//        aPath.addLine(to: CGPoint(x: 0, y: midY))
-//        aPath.addLine(to: CGPoint(x: 20, y: 0))
-//
-//        let layer = CAShapeLayer()
-//        layer.strokeColor = UIColor.darkGray.cgColor
-//        layer.lineWidth = 5
-//        layer.cornerRadius = self.frame.height / 3
-//
-//        self.layer.addSublayer(layer)
-//
-//
-//        let gradient = CAGradientLayer()
-//        gradient.frame = self.frame
-//        gradient.cornerRadius = self.frame.height / 3
-//        gradient.colors = [UIColor.purple.withAlphaComponent(0.5).cgColor, UIColor.black.cgColor]
-//
-//        let shapeMask = CAShapeLayer()
-//       shapeMask.path = aPath.cgPath
-//        gradient.mask = shapeMask
-//        self.layer.addSublayer(gradient)
+        //        let width = self.frame.width
+        //        let height = self.frame.height
+        //        let midY = (height) / 2
+        //
+        //        let aPath = UIBezierPath()
+        //
+        //        aPath.move(to: CGPoint(x: 20, y: 0))
+        //
+        //        aPath.addLine(to: CGPoint(x: width - 20, y: 0))
+        //        aPath.addLine(to: CGPoint(x: width, y: midY))
+        //        aPath.addLine(to: CGPoint(x: width - 20, y: height))
+        //        aPath.addLine(to: CGPoint(x: 20, y: height))
+        //        aPath.addLine(to: CGPoint(x: 0, y: midY))
+        //        aPath.addLine(to: CGPoint(x: 20, y: 0))
+        //
+        //        let layer = CAShapeLayer()
+        //        layer.strokeColor = UIColor.darkGray.cgColor
+        //        layer.lineWidth = 5
+        //        layer.cornerRadius = self.frame.height / 3
+        //
+        //        self.layer.addSublayer(layer)
+        //
+        //
+        //        let gradient = CAGradientLayer()
+        //        gradient.frame = self.frame
+        //        gradient.cornerRadius = self.frame.height / 3
+        //        gradient.colors = [UIColor.purple.withAlphaComponent(0.5).cgColor, UIColor.black.cgColor]
+        //
+        //        let shapeMask = CAShapeLayer()
+        //       shapeMask.path = aPath.cgPath
+        //        gradient.mask = shapeMask
+        //        self.layer.addSublayer(gradient)
         self.titleLabel?.font = .boldSystemFont(ofSize: 20)
         self.setTitleColor(.lightGray, for: .normal)
     }
@@ -112,9 +112,10 @@ extension UIView{
     func rotate() {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
         rotation.toValue = NSNumber(value: Double.pi * 2)
-        rotation.duration = 1
+        rotation.duration = 5
         rotation.isCumulative = true
         rotation.repeatCount = Float.greatestFiniteMagnitude
+        self.layoutIfNeeded()
         self.layer.add(rotation, forKey: "rotationAnimation")
     }
 }
@@ -155,6 +156,24 @@ class customLabelTwo: UILabel {
         self.layer.borderColor = UIColor.systemBlue.cgColor
         self.font = .boldSystemFont(ofSize: 24)
         self.textColor = .yellow
+        
+    }
+}
+
+extension UIViewController {
+    
+    @objc func animateColorChanges() {
+        let colors: [UIColor] = [.blue, .Navy, .darkPurple, .black]
+        UIView.animate(withDuration: 2) {
+            self.view.backgroundColor = colors[Int.random(in: 0..<colors.count)]
+        } completion: { _ in
+            return
+        }
+    }
+    
+    func changeBackgroundColors() {
+        let timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(animateColorChanges), userInfo: nil, repeats: true)
+        timer.fire()
         
     }
 }

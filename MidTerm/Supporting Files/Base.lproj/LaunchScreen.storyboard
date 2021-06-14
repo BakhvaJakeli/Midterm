@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,24 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ბახვა პროდაქშონ პრეცტავლაეტ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kii-MN-qJG">
-                                <rect key="frame" x="24.5" y="414" width="365" height="68"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-hL-Ivu">
+                                <rect key="frame" x="70" y="144" width="274" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Ryu-5i-pXu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who Want to be a Millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77M-ey-ej8">
+                                <rect key="frame" x="50" y="484" width="314" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="oEk-rj-KPu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-ly-7sh">
+                                <rect key="frame" x="50" y="792" width="314" height="20"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.90760666130000001" green="0.1958908439" blue="0.27841290829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.039215686274509803" green="0.031372549019607843" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kii-MN-qJG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lgC-Lo-NPn"/>
-                            <constraint firstItem="kii-MN-qJG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wQD-l4-hiv"/>
+                            <constraint firstItem="77M-ey-ej8" firstAttribute="top" secondItem="ejh-hL-Ivu" secondAttribute="bottom" constant="180" id="1d1-sa-P1g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hjb-ly-7sh" secondAttribute="trailing" constant="50" id="1pj-VF-SNQ"/>
+                            <constraint firstItem="ejh-hL-Ivu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ApS-kX-gD0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejh-hL-Ivu" secondAttribute="trailing" constant="70" id="L1Z-ha-04c"/>
+                            <constraint firstItem="hjb-ly-7sh" firstAttribute="top" secondItem="77M-ey-ej8" secondAttribute="bottom" constant="187" id="LRQ-Su-y8f"/>
+                            <constraint firstItem="77M-ey-ej8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="NeJ-8x-BN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hjb-ly-7sh" secondAttribute="bottom" constant="50" id="TTQ-pQ-Mf3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="77M-ey-ej8" secondAttribute="trailing" constant="50" id="UoR-Xi-fgZ"/>
+                            <constraint firstItem="hjb-ly-7sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="jew-AB-Tu2"/>
+                            <constraint firstItem="ejh-hL-Ivu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="m6Z-0d-xZL"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="966" height="959"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
