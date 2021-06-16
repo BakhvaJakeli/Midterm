@@ -14,13 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var newGameBtn: bakhvaButton!
-    @IBOutlet weak var HighScoreBtn: bakhvaButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
             self.musicStart()
         })
         mainImg.rotate()

@@ -17,7 +17,13 @@ class QuestionsViewController: UIViewController {
     var wrongAnswerMusic: AVAudioPlayer?
     var answerPressedMusic: AVAudioPlayer?
     var callHelpSound: AVAudioPlayer?
-
+    
+    var delegate: DelegateProtocol!
+    
+    var didUseFifty = false
+    var didUseCall = false
+    var didUseCrowd = false
+    
     var question: Question!
     var myButtonOutlets = [QuestionsButton]()
     @IBOutlet weak var questionLabel: UILabel!
@@ -30,9 +36,27 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var phoneImg: UIImageView!
     @IBOutlet weak var timerLabel: UILabel!
     var viewGradient: CAGradientLayer?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let theQuestion = question
+        if let vc = segue.destination as? DutaViewController {
+            vc.daQuestion = theQuestion
+        }
+        if let vc = segue.destination as? AudianceViewController {
+            vc.correctAnswerIndex = theQuestion?.correct
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         theTimer = timer()
+        if didUseFifty {
+            fiftyimg.isHidden = true
+        }
+        if didUseCall {
+            phoneImg.isHidden = true
+        }
+        if didUseCrowd {
+            audianceImg.isHidden = true
+        }
         myButtonOutlets = [answerOne, answerTwo, answerThree, answerFour]
         myButtonOutlets.forEach({ $0.titleLabel?.numberOfLines = 0
                                     $0.titleLabel?.lineBreakMode = .byWordWrapping
@@ -207,6 +231,10 @@ class QuestionsViewController: UIViewController {
     @objc func didPressFifty() {
         let rand = Int.random(in: 0...3)
         fiftyimg.isUserInteractionEnabled = false
+        delegate.dismissFiftyHelp(truth: true)
+        UIView.animate(withDuration: 0.8) {
+            self.fiftyimg.isHidden = true
+        }
         if question.correct == rand {
             didPressFifty()
         } else {
@@ -244,6 +272,11 @@ extension QuestionsViewController {
         audianceImg.addGestureRecognizer(gesture)
     }
     @objc func seagueView() {
+        theTimer?.invalidate()
+        delegate.dismisCrowdHelp(truth: true)
+        UIView.animate(withDuration: 0.8) {
+            self.audianceImg.isHidden = true
+        }
         performSegue(withIdentifier: "Audiance", sender: self)
     }
 }
@@ -256,6 +289,10 @@ extension QuestionsViewController {
     @objc func daseagueView() {
         self.backgroundMusic?.stop()
         self.phoneImg.isUserInteractionEnabled = false
+        delegate.dismissCallhelp(truth: true)
+        UIView.animate(withDuration: 0.8) {
+            self.phoneImg.isHidden = true
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.callHelpMusicStart()
         })
@@ -410,3 +447,6 @@ extension QuestionsViewController {
     
 
 }
+
+
+
